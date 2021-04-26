@@ -1,15 +1,14 @@
 import Store from '../store';
 import locale from '../locale/locale';
 import { modelHTML } from './constant';
-import { getSheetIndex } from '../methods/get';
-import { setluckysheet_scroll_status } from '../methods/set';
 import sheetmanage from './sheetmanage';
 import luckysheetsizeauto from './resize';
 import dataVerificationCtrl from './dataVerificationCtrl';
 import { replaceHtml,transformRangeToAbsolute,openSelfModel } from '../utils/util';
 import { selectionCopyShow } from './select';
 import tooltip from '../global/tooltip';
-import cleargridelement from '../global/cleargridelement';
+import CryptoApi from 'crypto-api';
+
 
 let isInitialProtection = false, isInitialProtectionAddRang = false, rangeItemListCache=[], isAddRangeItemState=true, updateRangeItemIndex = null, validationAuthority=null, updatingSheetFile=null, firstInputSheetProtectionPassword = true;
 let sqrefMapCache = {}, inputRangeProtectionPassword = {}, initialRangePasswordHtml=false;

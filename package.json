@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.1",
+    "crypto-api": "^0.8.5",
     "dayjs": "^1.9.6",
     "flatpickr": "^4.6.6",
     "jquery": "^2.2.4",

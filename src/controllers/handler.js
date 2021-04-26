@@ -65,7 +65,7 @@ import { getBorderInfoCompute } from '../global/border';
 import { luckysheetDrawMain } from '../global/draw';
 import locale from '../locale/locale';
 import Store from '../store';
-import { createLuckyChart, hideAllNeedRangeShow } from '../expendPlugins/chart/plugin'
+// import { createLuckyChart, hideAllNeedRangeShow } from '../expendPlugins/chart/plugin'
 
 //, columeflowset, rowflowset
 export default function luckysheetHandler() {
@@ -1099,10 +1099,10 @@ export default function luckysheetHandler() {
 
         $("#luckysheet-row-count-show, #luckysheet-column-count-show").hide();
 
-        if (!isEditMode()) {
-            //chartMix 隐藏当前页的数据选择区域高亮
-            hideAllNeedRangeShow();
-        }
+        // if (!isEditMode()) {
+        //     //chartMix 隐藏当前页的数据选择区域高亮
+        //     hideAllNeedRangeShow();
+        // }
 
         // selectHelpboxFill();
 
@@ -4652,15 +4652,15 @@ export default function luckysheetHandler() {
     });
 
     //Menu bar, Chart button
-    $("#luckysheet-chart-btn-title").click(function () {
-        createLuckyChart();
-    });
+    // $("#luckysheet-chart-btn-title").click(function () {
+    //     createLuckyChart();
+    // });
 
-    // Right-click the menu, chart generation
-    $("#luckysheetdatavisual").click(function () {
-        createLuckyChart();
-        $("#luckysheet-rightclick-menu").hide();
-    });
+    // // Right-click the menu, chart generation
+    // $("#luckysheetdatavisual").click(function () {
+    //     createLuckyChart();
+    //     $("#luckysheet-rightclick-menu").hide();
+    // });
 
 
     //菜单栏 数据透视表

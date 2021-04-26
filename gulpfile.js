@@ -87,17 +87,17 @@ const paths = {
     css:['src/css/*.css','node_modules/flatpickr/dist/themes/light.css'],
     pluginsJs:[
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/uuid/dist/umd/uuid.min.js',
-        'src/plugins/js/clipboard.min.js',
+        // 'node_modules/uuid/dist/umd/uuid.min.js',
+        // 'src/plugins/js/clipboard.min.js',
         'src/plugins/js/spectrum.min.js',
         'src/plugins/js/jquery-ui.min.js',
         'src/plugins/js/jquery.mousewheel.min.js',
         // 'src/plugins/js/numeral.min.js',
-        'src/plugins/js/html2canvas.min.js',
-        'src/plugins/js/localforage.min.js',
-        'src/plugins/js/lodash.min.js',
+        // 'src/plugins/js/html2canvas.min.js',
+        // 'src/plugins/js/localforage.min.js',
+        // 'src/plugins/js/lodash.min.js',
         'src/plugins/js/jstat.min.js',
-        'src/plugins/js/crypto-api.min.js',
+        // 'src/plugins/js/crypto-api.min.js',
         'src/plugins/js/jquery.sPage.min.js'
     ],
 
@@ -208,6 +208,10 @@ async function core() {
 }
 
 // According to the build tag in html, package js and css
+/**
+ * 处理插件css ./plugins/css/pluginsCss.css
+ * @returns 
+ */
 function pluginsCss() {
     return src(paths.pluginsCss)
         .pipe(concat(paths.concatPluginsCss))
@@ -216,6 +220,10 @@ function pluginsCss() {
 
 }
 
+/**
+ * 处理插件 /plugins/plugins.css
+ * @returns
+ */
 function plugins() {
     return src(paths.plugins)
         .pipe(concat(paths.concatPlugins))
@@ -223,6 +231,10 @@ function plugins() {
         .pipe(dest(paths.destPlugins));
 }
 
+/**
+ * 处理 css
+ * @returns 
+ */
 function css() {
     return  src(paths.css)
         .pipe(concat(paths.concatCss))
@@ -272,7 +284,20 @@ function copyStaticCssImages(){
 }
 
 const dev = series(clean, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core), watcher, serve);
-const build = series(clean, parallel(pluginsCss, plugins, css, pluginsJs, copyStaticHtml, copyStaticFonts, copyStaticAssets, copyStaticImages, copyStaticExpendPlugins, copyStaticDemoData, copyStaticCssImages, core));
+const build = series(clean, parallel(
+    pluginsCss,
+    plugins,
+    css,
+    pluginsJs,
+    copyStaticHtml, // del
+    copyStaticFonts, // 拷贝字体
+    copyStaticAssets, // 拷贝静态资源
+    copyStaticImages,
+    // copyStaticExpendPlugins,
+    copyStaticDemoData, // del
+    copyStaticCssImages,
+    core
+));
 
 exports.dev = dev;
 exports.build = build;
