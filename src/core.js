@@ -5,7 +5,6 @@ import Store from './store';
 import server from './controllers/server';
 import luckysheetConfigsetting from './controllers/luckysheetConfigsetting';
 import sheetmanage from './controllers/sheetmanage';
-import luckysheetsizeauto from './controllers/resize';
 import luckysheetHandler from './controllers/handler';
 import {initialFilterHandler} from './controllers/filter';
 import {initialMatrixOperation} from './controllers/matrixOperation';
@@ -14,7 +13,7 @@ import {formulaBarInitial} from './controllers/formulaBar';
 import {rowColumnOperationInitial} from './controllers/rowColumnOperation';
 import {keyboardInitial} from './controllers/keyboard';
 import {orderByInitial} from './controllers/orderBy';
-// import {initPlugins} from './controllers/expendPlugins';
+
 import {
     getluckysheetfile,
     getluckysheet_select_save,
@@ -41,9 +40,6 @@ import { initListener } from './controllers/listener';
 
 let luckysheet = {};
 
-// mount api
-// luckysheet.api = api;
-// Object.assign(luckysheet, api);
 
 luckysheet = common_extend(api,luckysheet);
 

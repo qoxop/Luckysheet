@@ -8,24 +8,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0" />
 	<title>Luckysheet</title>
 
-	<link rel='stylesheet' href='./plugins/css/pluginsCss.css' />
-	<link rel='stylesheet' href='./plugins/plugins.css' />
-	<link rel='stylesheet' href='./css/luckysheet.css' />
-	<link rel='stylesheet' href='./assets/iconfont/iconfont.css' />
-	<script src="./plugins/js/plugin.js"></script>
-
+	<link rel='stylesheet' href='./assets/styles/index.css' />
+	<link rel='stylesheet' href='./assets/plugins/index.css' />
 	<!-- rollup luckysheet.js -->
+	<script src='./plugins/index.js'></script>
 	<script src="./luckysheet.umd.js"></script>
-
+	<style>
+		#luckysheet {
+			margin:0px;
+			padding:0px;
+			position:absolute;
+			width:100%;
+			height:100%;
+			left: 0px;
+			top: 0px;
+		}
+	</style>
 </head>
 
 <body>
-	<!-- Non-full screen test -->
-	<!-- <div style="position: relative;width: 100%;height: 100%;">
-
-		<div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:80%;height:500px;left: 20%;top: 200px;bottom:0;right: 0;"></div>
-	</div> -->
-	<div id="luckysheet" style="margin:0px;padding:0px;position:absolute;width:100%;height:100%;left: 0px;top: 0px;"></div>
+	<div id="luckysheet"></div>
 	<!-- demo feature, non-production use -->
 	<script src="./demoData/demoFeature.js"></script>
 	<script src="./demoData/sheetFormula.js"></script>
@@ -41,17 +43,6 @@
 	<script src="./demoData/sheetDataVerification.js"></script>
 
 	<script>
-		// import sheetFormula from './demoData/sheetFormula.js'
-		// import sheetCell from './demoData/sheetCell.js'
-		// import sheetConditionFormat from './demoData/sheetConditionFormat.js'
-		// import sheetTable from './demoData/sheetTable.js'
-		// import sheetComment from './demoData/sheetComment.js'
-		// import sheetPivotTableData from './demoData/sheetPivotTableData.js'
-		// import sheetPivotTable from './demoData/sheetPivotTable.js'
-		// import sheetSparkline from './demoData/sheetSparkline.js'
-		// import sheetChart from './demoData/sheetChart.js'
-		// import sheetPicture from './demoData/sheetPicture.js'
-		// import sheetDataVerification from './demoData/sheetDataVerification.js'
 
 		$(function () {
 

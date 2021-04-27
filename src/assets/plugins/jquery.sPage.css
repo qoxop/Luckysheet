@@ -42,7 +42,7 @@
 .prevBtn, .nextBtn {
     width: 16px;
     height: 27px;
-    background: url(images/js.png) no-repeat center center;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABAUlEQVQ4T5WTsUrEQBCG//FYxC7BlxDfZ9t0O8EivY0YBEGbqwTJbBauUA8tfIqzsBH18BXyDKkSiUQIRza32XJ2/2+/2WUIIytJkmOl1Ilz7m1sf1gj3wFmPgOwFZHNFMQL6ELMfA5gMwWZBHQQY8wtEb2KyPuYyV5AD1kS0fMYJAgAgIwxd0TkROQj6BF3dfM8P6iq6h5AMYSEGvzxtNaLOI5d0zTLsiy/u9osADMrACsANyKynQXowm3bPgG4ttZ+/rcYZOALBxlkWXZY1/XD7s1BBn34BcDlUDvoG/vwGsCVL+xtQWt9FEXRI4ALa+3P7GFK0/QUgCqK4mvfOP8CEjZjEfl6lvkAAAAASUVORK5CYII=) no-repeat center center;
     background-size: 100% auto;
     display: block;
     transform: rotate(180deg);
