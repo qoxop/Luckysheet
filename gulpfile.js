@@ -231,7 +231,7 @@ const dev = series(
 const build = series(
     clean, 
     parallel(
-        copy,
+        copyStaticAssets,
         mainStyle,
         pluginsStyle,
         pluginsJs, 
