@@ -2641,10 +2641,10 @@ body:not(.ewa-ipad) .luckysheet-rows-h-cell-sel:hover {
     position: fixed;
     height: 0px;
     width: 0px;
-    left: -100px;
+    /* left: -100px; */
     /*overflow: hidden;*/
     /*text-indent: -999999px;*/
-    padding-left: 999999px;
+    /* padding-left: 999999px; */
 }
 
 /* #luckysheet-copy-btn {

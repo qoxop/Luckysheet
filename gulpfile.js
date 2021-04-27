@@ -72,7 +72,8 @@ const paths = {
         'src/plugins/jquery-ui.min.js',
         'src/plugins/jquery.mousewheel.min.js',
         'src/plugins/jstat.min.js',
-        'src/plugins/jquery.sPage.min.js'
+        'src/plugins/jquery.sPage.min.js',
+        'src/plugins/crypto-api.min.js'
     ],
     pluginsJsDest: ['dist/plugins'],
     // Package directory
