@@ -5276,9 +5276,10 @@ export default function luckysheetHandler() {
             }
 
             let txtdata = clipboardData.getData("text/html") || clipboardData.getData("text/plain");
-
+        
             //如果标示是qksheet复制的内容，判断剪贴板内容是否是当前页面复制的内容
             let isEqual = true;
+            let copyInfo = {};
             if (txtdata.indexOf("luckysheet_copy_action_table") > - 1 && Store.luckysheet_copy_save["copyRange"] != null && Store.luckysheet_copy_save["copyRange"].length > 0) {
                 //剪贴板内容解析
                 let cpDataArr = [];
@@ -5308,9 +5309,13 @@ export default function luckysheetHandler() {
                     copy_r2 = Store.luckysheet_copy_save["copyRange"][0].row[1],
                     copy_c1 = Store.luckysheet_copy_save["copyRange"][0].column[0],
                     copy_c2 = Store.luckysheet_copy_save["copyRange"][0].column[1];
-
+                copyInfo = {
+                    r1: copy_r1, r2: copy_r2, c1: copy_c1, c2: copy_r2
+                };
                 let copy_index = Store.luckysheet_copy_save["dataSheetIndex"];
-
+                copyInfo = {
+                    r1: copy_r1, r2: copy_r2, c1: copy_c1, c2: copy_r2, sheetIndex: copy_index,
+                };
                 let d;
                 if(copy_index == Store.currentSheetIndex){
                     d = editor.deepCopyFlowData(Store.flowdata);
@@ -5360,7 +5365,7 @@ export default function luckysheetHandler() {
 
             
             // hook
-            if(!method.createHookFunction('rangePasteBefore',Store.luckysheet_select_save,txtdata)){
+            if(!method.createHookFunction('rangePasteBefore',Store.luckysheet_select_save,txtdata, copyInfo)){
                 return;
             }
 
