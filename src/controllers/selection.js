@@ -575,8 +575,8 @@ const selection = {
             return;
         }
 
-        const _locale = locale();
-        const local_drag = _locale.drag;
+        // const _locale = locale();
+        // const local_drag = _locale.drag;
 
         let textarea = $("#luckysheet-copy-content");
         textarea.focus();
@@ -599,14 +599,14 @@ const selection = {
             else if (triggerType != "btn") {
                 _this.pasteHandler(data);
             }
-            else {
-                if(isEditMode()){
-                    alert(local_drag.pasteMustKeybordAlert);
-                }
-                else{
-                    tooltip.info(local_drag.pasteMustKeybordAlertHTMLTitle, local_drag.pasteMustKeybordAlertHTML);
-                }
-            }
+            // else {
+            //     if(isEditMode()){
+            //         alert(local_drag.pasteMustKeybordAlert);
+            //     }
+            //     else{
+            //         tooltip.info(local_drag.pasteMustKeybordAlertHTMLTitle, local_drag.pasteMustKeybordAlertHTML);
+            //     }
+            // }
         }, 10);
     },
     pasteHandler: function (data, borderInfo) {
